@@ -4,19 +4,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import images from './assets/images.json'
 
-const imgComponent = src => {
-
+const Img = ({src, alt='test'}) => {
+  console.log(alt);
   return (
     <div>
-      {/*кометнар тут може бутм*/}
-      <img width='200px' src={src} alt='' />
+      <img width='150px' src={src} alt={alt} />
     </div>
   );
 };
  
 
-console.log(imgComponent);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(imgComponent(images[1]));
+root.render(<Img src={images[0]} />);
 
