@@ -1,11 +1,11 @@
 import React from 'react';
 
 import ReactDOM from 'react-dom/client';
-
 import './index.css';
 // import images from './assets/images.json';
 import users from './assets/users.json';
 import { UserCard } from './conponents/UserCard/UserCard';
+import { UserCard2 } from './conponents/UserCard2/UserCard2';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,5 +13,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <UserCard users={users} />
+        <UserCard2 users={users} />
     </React.StrictMode>,
 );

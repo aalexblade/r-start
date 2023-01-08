@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 
-import styles from './UserCard.module.css';
+import styles from './UserCard2.module.css';
 console.log(styles);
 
 // import { Container } from "../Container/Container";
@@ -14,7 +14,7 @@ const randomColor = () => {
     return Math.random() > 0.5 ? 'yellow' : 'tomatto';
 };
 
-export const UserCard = ({ users }) => {
+export const UserCard2 = ({ users }) => {
     return users.map((user) => {
         return (
             <Fragment key={user.id}>
@@ -22,7 +22,7 @@ export const UserCard = ({ users }) => {
                 <p
                     className={styles.text}
                     style={{
-                    backgroundColor: randomColor(),
+                    // backgroundColor: randomColor(),
                     
                 }}>{user.skills}</p>
             </Fragment>
@@ -30,7 +30,7 @@ export const UserCard = ({ users }) => {
     });
     };
 
-UserCard.propTypse = {
+UserCard2.propTypse = {
     users: PropTypes.arrayOf(
         //shape - для опису декількох полів з об'єкта
         // exact - для опису всіх полів об'єкта
