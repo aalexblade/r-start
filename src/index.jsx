@@ -10,4 +10,8 @@ import { UserCard } from './conponents/UserCard/UserCard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(<UserCard images={images} />);
-root.render(<UserCard users={users} />);
+root.render(
+    <React.StrictMode>
+        <UserCard users={users} />
+    </React.StrictMode>,
+);

@@ -1,5 +1,6 @@
 
 import PropTypes from 'prop-types';
+import { exact } from 'prop-types';
 import { Fragment } from 'react';
 // import { Container } from "../Container/Container";
 // import { UserAvatar } from "../UserAvatar/UserAvatar";
@@ -16,8 +17,16 @@ export const UserCard = ({ users }) => {
 
 UserCard.propTypse = {
     users: PropTypes.arrayOf(
-        PropTypes.shape({
+        //shape - для опису декількох полів з об'єкта
+        // exact - для опису всіх полів об'єкта
+        PropTypes.exact({
         id: PropTypes.number.isRequired,
-       name: PropTypes.string.isRequired, 
+        name: PropTypes.string.isRequired,
+        email: PropTypes.string,
+        bio: PropTypes.string,
+        skills: PropTypes.string,
+       isOpenToWork: PropTypes.bool,
+       
     })).isRequired,
 };
+  
