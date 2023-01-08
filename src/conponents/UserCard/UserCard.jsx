@@ -1,7 +1,7 @@
 
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
-
+import classNames from 'classnames';
 
 
 import styles from './UserCard.module.css';
@@ -11,16 +11,18 @@ console.log(styles);
 // import { UserAvatar } from "../UserAvatar/UserAvatar";
 
 const randomColor = () => {
-    return Math.random() > 0.5 ? 'yellow' : 'tomatto';
+    return Math.random() > 0.5 ? 'yellow' : 'red';
 };
 
+const isOnline = false;
 export const UserCard = ({ users }) => {
+    // const classNames = [styles.text, styles.item].join(' ');
     return users.map((user) => {
         return (
             <Fragment key={user.id}>
                 <p>{user.name}</p>
                 <p
-                    className={styles.text}
+                    className={classNames(styles.text, isOnline && styles.item)}
                     style={{
                     backgroundColor: randomColor(),
                     

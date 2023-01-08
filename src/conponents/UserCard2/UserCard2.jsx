@@ -20,7 +20,7 @@ export const UserCard2 = ({ users }) => {
             <Fragment key={user.id}>
                 <p>{user.name}</p>
                 <p
-                    className={styles.text}
+                    className={styles.text + ' ' + styles.item}
                     style={{
                     // backgroundColor: randomColor(),
                     

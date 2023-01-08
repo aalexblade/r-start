@@ -1,7 +1,8 @@
 .text{
     color: blue;
-};
+    
+}
 
-.item {
-    color: rgb(255, 0, 0);
+.item{
+    padding: 20px;
 }
